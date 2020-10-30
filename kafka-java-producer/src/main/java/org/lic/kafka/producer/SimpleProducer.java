@@ -35,7 +35,6 @@ public class SimpleProducer {
         for(int i = 0; i < 100; i++) {
             producer.send(new ProducerRecord<String, String>("mytopic", Integer.toString(i), Integer.toString(i)));
             System.out.println("发送"+i);
-
         }
         producer.close();
     }
